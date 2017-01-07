@@ -1,4 +1,3 @@
 #!/usr/bin/python3
-alphabet = ['ABCDEFGHIJKLMNOPQRSTUVWXYZ']
-for i in alphabet:
-    print('{:s}'.format(i))
+import string
+print(string.ascii_uppercase)
