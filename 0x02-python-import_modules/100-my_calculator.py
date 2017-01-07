@@ -14,11 +14,11 @@ if __name__ == "__main__":
         a = int(argv[1])
         b = int(argv[3])
         if argv[2] == '+':
-            total = a + b
+            total = add(a, b)
         elif argv[2] == '-':
-            total = a - b
+            total = sub(a, b)
         elif argv[2] == '*':
-            total = a * b
+            total = mul(a, b)
         else:
-            total = a / b
+            total = div(a, b)
         print('{:d} {:s} {:d} = {:d}'.format(a, argv[2], b, total))
