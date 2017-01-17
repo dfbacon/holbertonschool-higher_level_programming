@@ -1,0 +1,35 @@
+======================================
+Test Cases for Use in 0-add_integer.py
+======================================
+
+Testing for function called "add_integer(a, b)".
+
+"add_integers(a, b)" returns the sum of two arguments, a and b. For numbers,
+that value is equivalent to using the "+" operator.
+
+	>>> add_integer = __import__('0-add_integer').add_integer
+
+Exceptions
+----------
+
+Check if both arguments are integer type. Raise TypeError if not.
+
+	>>> add_integer("a", 15)
+	Traceback (most recent call last):
+		  ...
+	TypeError: a must be an integer
+
+	>>> add_integer(15, "b")
+	Traceback (most recent call last):
+		  ...
+	TypeError: b must be an integer
+
+Correct Output
+--------------
+
+	>>> add_integer(1, 2)
+	3
+	>>> add_integer(100, -2)
+	98
+	>>> add_integer(100.3, -2)
+	98
