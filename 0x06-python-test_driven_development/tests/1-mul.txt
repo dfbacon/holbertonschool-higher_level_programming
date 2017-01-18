@@ -16,7 +16,7 @@ Check for at least one argument to be float or int type.
       >>> mul("a", "b")
       Traceback (most recent call last):
       ...
-      TypeError:  can't multiply sequence by non-int of type 'str'
+      TypeError: can't multiply sequence by non-int of type 'str'
 
 Integer Cases
 -----------
@@ -43,15 +43,11 @@ Check for one argument as undefined.
 
 Check for one argument as letter.
       >>> mul(5, "j")
-      jjjjj
-
-Check for one argument as forwardslash character (\).
-      >>> mul(5, "\")
-      SyntaxError: EOL while scanning string literal
+      'jjjjj'
 
 Check for one argument as string.
       >>> mul(2, "Holberton")
-      HolbertonHolberton
+      'HolbertonHolberton'
 
 Check for one argument as dictionary.
       >>> mul(5, {'key': 'value'})
@@ -81,32 +77,32 @@ Check for one argument as None.
       TypeError: unsupported operand type(s) for *: 'float' and 'NoneType'
 
 Check for one argument as undefined.
-      >>>mul(5.7, help)
+      >>> mul(5.7, j)
       Traceback (most recent call last):
       ...
-      NameError: name 'Help' is not defined
+      NameError: name 'j' is not defined
 
 Check for one argument as letter.
-      >>>mul(2.5, 'n')
+      >>> mul(2.5, 'n')
       Traceback (most recent call last):
       TypeError: can't multiply sequence by non-int of type 'float'
 
 Check for one argument as string.
-      >>>mul(2.5, "Error")
+      >>> mul(2.5, "Error")
       Traceback (most recent call last):
       TypeError: can't multiply sequence by non-int of type 'float'
 
 Check for one argument as dictionary.
-      >>>mul(1.4, {"key": "value"})
+      >>> mul(1.4, {"key": "value"})
       Traceback (most recent call last):
       TypeError: unsupported operand type(s) for *: 'float' and 'dict'
 
 Check for one argument as list.
-      >>>mul(3.7, [1, 2, 3])
+      >>> mul(3.7, [1, 2, 3])
       Traceback (most recent call last):
       TypeError: can't multiply sequence by non-int of type 'float'
 
 Check for one argument as tuple.
-      >>>mul(9.8, (1, 3, 5, 7, 9))
+      >>> mul(9.8, (1, 3, 5, 7, 9))
       Traceback (most recent call last):
       TypeError: can't multiply sequence by non-int of type 'float'
