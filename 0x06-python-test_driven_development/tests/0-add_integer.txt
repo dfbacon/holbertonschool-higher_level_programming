@@ -13,23 +13,130 @@ Exceptions
 ----------
 
 Check if both arguments are integer type. Raise TypeError if not.
-
-	>>> add_integer("a", 15)
+	>>> add_integer("Holberton", "School")
 	Traceback (most recent call last):
-		  ...
+	...
 	TypeError: a must be an integer
 
-	>>> add_integer(15, "b")
+::
+	>>> add_integer("Holberton", 15)
 	Traceback (most recent call last):
-		  ...
+	...
+	TypeError: a must be an integer
+
+::
+	>>> add_integer(15, "School")
+	Traceback (most recent call last):
+	...
+	TypeError: b must be an integer
+
+::
+	>>> add_integer([1, 2, 3], 98)
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
+
+::
+	>>> add_integer(98, [1, 2, 3])
+	Traceback (most recent call last):
+	...
+	TypeError: b must be an integer
+
+::
+	>>> add_integer({1: 'yo'}, 98)
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
+
+::
+	>>> add_integer(98, {1: 'yo'})
+	Traceback (most recent call last):
+	...
+	TypeError: b must be an integer
+
+::
+	>>> add_integer({1, 2, 3}, 98)
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
+
+::
+	>>> add_integer(98, {1, 2, 3})
+	Traceback (most recent call last):
+	...
+	TypeError: b must be an integer
+
+::
+	>>> add_integer(('one', 2), 98)
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
+
+::
+	>>> add_integer(98, ('one', 2))
+	Traceback (most recent call last):
+	...
+	TypeError: b must be an integer
+
+::
+	>>> add_integer(None, 98)
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
+
+::
+	>>> add_integer(98, None)
+	Traceback (most recent call last):
+	...
 	TypeError: b must be an integer
 
 Correct Output
 --------------
 
+Should always return an integer.
 	>>> add_integer(1, 2)
 	3
+
+::
 	>>> add_integer(100, -2)
 	98
+
+::
 	>>> add_integer(100.3, -2)
 	98
+
+::
+	>>> add_integer(-1, 2)
+	1
+
+::
+	>>> add_integer(-1, -2)
+	-3
+
+::
+	>>> add_integer(1.1, 1)
+	2
+
+::
+	>>> add_integer(-1.2, 0.2)
+	-1
+
+::
+	>>> add_integer(-1.0, -2.0)
+	-3
+
+::
+	>>> add_integer(True, False)
+	1
+
+::
+	>>> add_integer(-True, False)
+	-1
+
+::
+	>>> add_integer(-True, -False)
+	-1
+
+::
+	>>> add_integer(True, -False)
+	1
