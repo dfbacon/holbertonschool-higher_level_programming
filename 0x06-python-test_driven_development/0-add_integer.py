@@ -10,8 +10,7 @@ For example:
 '''
 
 def add_integer(a, b):
-    '''
-    Return the sum of a and b, an exact integer.
+    '''Return the sum of a and b, an exact integer.
     '''
 
     if isinstance( a, float ) or isinstance( b, float ) is True:
@@ -21,7 +20,3 @@ def add_integer(a, b):
     if isinstance( b, int ) is False:
         raise TypeError("b must be an integer")
     return(a + b)
-
-if __name__ == "__main__":
-    import doctest
-    doctest.testmod("tests/0-add_integer.txt")
