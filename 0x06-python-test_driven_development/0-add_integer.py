@@ -9,14 +9,15 @@ For example:
 4
 '''
 
+
 def add_integer(a, b):
     '''Return the sum of a and b, an exact integer.
     '''
 
-    if isinstance( a, float ) or isinstance( b, float ) is True:
+    if isinstance(a, float) or isinstance(b, float) is True:
         a, b = int(a), int(b)
-    if isinstance( a, int ) is False:
+    if isinstance(a, int) is False:
         raise TypeError("a must be an integer")
-    if isinstance( b, int ) is False:
+    if isinstance(b, int) is False:
         raise TypeError("b must be an integer")
     return(a + b)
