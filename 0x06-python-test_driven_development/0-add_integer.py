@@ -21,3 +21,7 @@ def add_integer(a, b):
     if isinstance( b, int ) is False:
         raise TypeError("b must be an integer")
     return(a + b)
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod("tests/0-add_integer.txt")
