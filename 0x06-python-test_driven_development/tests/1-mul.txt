@@ -18,6 +18,54 @@ Check for at least one argument to be float or int type.
       ...
       TypeError: can't multiply sequence by non-int of type 'str'
 
+::
+      >>> 	 mul(1, 2)
+      Traceback (most recent call last):
+      ...
+      IndentationError: unexpected indent
+
+::
+      >>> mul(, 2)
+      Traceback (most recent call last):
+      ...
+      SyntaxError: invalid syntax
+
+::
+      >>> mul(foo, bar)
+      Traceback (most recent call last):
+      ...
+      NameError: name 'foo' is not defined
+
+::
+      >>> mul(('one', 2, 3), None)
+      Traceback (most recent call last):
+      ...
+      TypeError: can't multiply sequence by non-int of type 'NoneType'
+
+::
+      >>> mul(None, ('one', 2, 3))
+      Traceback (most recent call last):
+      ...
+      TypeError: can't multiply sequence by non-int of type 'NoneType'
+
+::
+      >>> mul(1)
+      Traceback (most recent call last):
+      ...
+      TypeError: mul() missing 1 required positional argument: 'b'
+
+::
+      >>> mul(1, 2, 3)
+      Traceback (most recent call last):
+      ...
+      TypeError: mul() takes 2 positional arguments but 3 were given
+
+::
+      >>> mul()
+      Traceback (most recent call last):
+      ...
+      TypeError: mul() missing 2 required positional arguments: 'a' and 'b'
+
 Integer Cases
 -----------
 
@@ -25,9 +73,69 @@ Check for both arguments as integers.
       >>> mul(2, 4)
       8
 
+::
+      >>> mul(4, 2)
+      8
+
+Check for one argument as negative integer.
+      >>> mul(-2, 4)
+      -8
+
+::
+      >>> mul(2, -4)
+      -8
+
+Check for both arguments as negative integers.
+      >>> mul(-2, -4)
+      8
+
 Check for one argument as float.
       >>> mul(1, 2.2)
       2.2
+
+::
+      >>> mul(2.2, 1)
+      2.2
+
+Check for one argument as negative float.
+      >>> mul(-2.2, 1)
+      -2.2
+
+::
+      >>> mul(1, -2.2)
+      -2.2
+
+Check for one argument as boolean.
+      >>> mul(True, 2)
+      2
+
+::
+      >>> mul(False, 2)
+      0
+
+::
+      >>> mul(2, True)
+      2
+
+::
+      >>> mul(2, False)
+      0
+
+Check for both arguments as booleans.
+      >>> mul(True, True)
+      1
+
+::
+      >>> mul(True, False)
+      0
+
+::
+      >>> mul(False, True)
+      0
+
+::
+      >>> mul(False, False)
+      0
 
 Check for one argument as None.
       >>> mul(1, None)
@@ -35,7 +143,19 @@ Check for one argument as None.
       ...
       TypeError: unsupported operand type(s) for *: 'int' and 'NoneType'
 
+::
+      >>> mul(None, 1)
+      Traceback (most recent call last):
+      ...
+      TypeError: unsupported operand type(s) for *: 'NoneType' and 'int'
+
 Check for one argument as undefined.
+      >>> mul(5, j)
+      Traceback (most recent call last):
+      ...
+      NameError: name 'j' is not defined
+
+::
       >>> mul(5, j)
       Traceback (most recent call last):
       ...
@@ -45,23 +165,121 @@ Check for one argument as letter.
       >>> mul(5, "j")
       'jjjjj'
 
+::
+      >>> mul("j", 5)
+      'jjjjj'
+
 Check for one argument as string.
       >>> mul(2, "Holberton")
       'HolbertonHolberton'
 
+::
+      >>> mul("Holberton", 2)
+      'HolbertonHolberton'
+
 Check for one argument as dictionary.
-      >>> mul(5, {'key': 'value'})
+      >>> mul(5, {1: 'yo'})
       Traceback (most recent call last):
       ...
       TypeError: unsupported operand type(s) for *: 'int' and 'dict'
+
+::
+      >>> mul({1: 'yo'}, 5)
+      Traceback (most recent call last):
+      ...
+      TypeError: unsupported operand type(s) for *: 'dict' and 'int'
+
+Check for one argument as set.
+      >>> mul({1, 2, 3}, 2)
+      Traceback (most recent call last):
+      ...
+      TypeError: unsupported operand type(s) for *: 'set' and 'int'
+
+::
+      >>> mul(2, {1, 2, 3})
+      Traceback (most recent call last):
+      ...
+      TypeError: unsupported operand type(s) for *: 'int' and 'set'
 
 Check for one argument as list.
       >>> mul(2, ['Hello', 8])
       ['Hello', 8, 'Hello', 8]
 
+::
+      >>> mul(['Hello', 8], 2)
+      ['Hello', 8, 'Hello', 8]
+
 Check for one argument as tuple.
-      >>> mul(3, (7, 8, 9))
-      (7, 8, 9, 7, 8, 9, 7, 8, 9)
+      >>> mul(3, ('seven', 8, 9))
+      ('seven', 8, 9, 'seven', 8, 9, 'seven', 8, 9)
+
+::
+      >>> mul(('seven', 8, 9), 3)
+      ('seven', 8, 9, 'seven', 8, 9, 'seven', 8, 9)
+
+Check for one argument as Docstring.
+      >>> mul("""hello""", 2)
+      'hellohello'
+
+::
+      >>> mul(2, """hello""")
+      'hellohello'
+
+Check for one argument as sum.
+      >>> mul(1 + 2, 2)
+      6
+
+::
+      >>> mul(2, 1 + 2)
+      6
+
+Check for one argument as difference.
+      >>> mul(1 - 2, 2)
+      -2
+
+::
+      >>> mul(2, 1 - 2)
+      -2
+
+Check for one argument as product.
+      >>> mul(2 * 2, 3)
+      12
+
+::
+      >>> mul(3, 2 * 2)
+      12
+
+Check for one argument as quotient.
+      >>> mul(4 / 2, 2)
+      4.0
+
+::
+      >>> mul(2, 4 / 2)
+      4.0
+
+Check for one argument as division remainder.
+      >>> mul(4 % 2, 2)
+      0
+
+::
+      >>> mul(2, 4 % 2)
+      0
+
+Check for one argument as power.
+      >>> mul(2 ** 3, 1)
+      8
+
+::
+      >>> mul(1, 2 ** 3)
+      8
+
+Check for both arguments as large integers.
+      >>> mul(1e10000, 1e10000)
+      inf
+
+Check for both arguments as large integers, less than infinity.
+      >>> mul(1E+100, -3E+102)
+      -2.9999999999999997e+202
 
 Float Case
 ----------
@@ -70,14 +288,42 @@ Check for both arguments as float.
       >>> mul(1.2, 2.3)
       2.76
 
+Check for both arguments as negative floats.
+      >>> mul(-1.2, -2.2)
+      2.64
+
+Check for one argument as negative float.
+      >>> mul(-1.5, 2.4)
+      -3.5999999999999996
+
+::
+      >>> mul(2.4, -1.5)
+      -3.5999999999999996
+
+Check for both arguments as infinity.
+      >>> mul(float("inf"), float("inf"))
+      inf
+
 Check for one argument as None.
       >>> mul(1.2, None)
       Traceback (most recent call last):
       ...
       TypeError: unsupported operand type(s) for *: 'float' and 'NoneType'
 
+::
+      >>> mul(None, 1.2)
+      Traceback (most recent call last):
+      ...
+      TypeError: unsupported operand type(s) for *: 'NoneType' and 'float'
+
 Check for one argument as undefined.
       >>> mul(5.7, j)
+      Traceback (most recent call last):
+      ...
+      NameError: name 'j' is not defined
+
+::
+      >>> mul(j, 5.7)
       Traceback (most recent call last):
       ...
       NameError: name 'j' is not defined
@@ -87,8 +333,18 @@ Check for one argument as letter.
       Traceback (most recent call last):
       TypeError: can't multiply sequence by non-int of type 'float'
 
+::
+      >>> mul('n', 2.5)
+      Traceback (most recent call last):
+      TypeError: can't multiply sequence by non-int of type 'float'
+
 Check for one argument as string.
       >>> mul(2.5, "Error")
+      Traceback (most recent call last):
+      TypeError: can't multiply sequence by non-int of type 'float'
+
+::
+      >>> mul("Error", 2.5)
       Traceback (most recent call last):
       TypeError: can't multiply sequence by non-int of type 'float'
 
@@ -97,12 +353,87 @@ Check for one argument as dictionary.
       Traceback (most recent call last):
       TypeError: unsupported operand type(s) for *: 'float' and 'dict'
 
+::
+      >>> mul({"key": "value"}, 1.4)
+      Traceback (most recent call last):
+      TypeError: unsupported operand type(s) for *: 'dict' and 'float'
+
+Check for one argument as set.
+      >>> mul({1, 2, 3}, 2.5)
+      Traceback (most recent call last):
+      ...
+      TypeError: unsupported operand type(s) for *: 'set' and 'float'
+
+::
+      >>> mul(2.5, {1, 2, 3})
+      Traceback (most recent call last):
+      ...
+      TypeError: unsupported operand type(s) for *: 'float' and 'set'
+
 Check for one argument as list.
       >>> mul(3.7, [1, 2, 3])
       Traceback (most recent call last):
       TypeError: can't multiply sequence by non-int of type 'float'
 
-Check for one argument as tuple.
-      >>> mul(9.8, (1, 3, 5, 7, 9))
+::
+      >>> mul([1, 2, 3], 3.7)
       Traceback (most recent call last):
       TypeError: can't multiply sequence by non-int of type 'float'
+
+Check for one argument as tuple.
+      >>> mul(9.8, ('one', 3, 5, 7, 9))
+      Traceback (most recent call last):
+      TypeError: can't multiply sequence by non-int of type 'float'
+
+::
+      >>> mul(('one', 3, 5, 7, 9), 9.8)
+      Traceback (most recent call last):
+      TypeError: can't multiply sequence by non-int of type 'float'
+
+Check for one argument as sum.
+      >>> mul(1 + 2, 2.3)
+      6.8999999999999995
+
+::
+      >>> mul(2.3, 1 + 2)
+      6.8999999999999995
+
+Check for one argument as difference.
+      >>> mul(1 - 2, 2.3)
+      -2.3
+
+::
+      >>> mul(2.3, 1 - 2)
+      -2.3
+
+Check for one argument as product.
+      >>> mul(2 * 2, 3.5)
+      14.0
+
+::
+      >>> mul(3.5, 2 * 2)
+      14.0
+
+Check for one argument as quotient.
+      >>> mul(4 / 2, 2.7)
+      5.4
+
+::
+      >>> mul(2.7, 4 / 2)
+      5.4
+
+Check for one argument as division remainder.
+      >>> mul(4 % 2, 2.9)
+      0.0
+
+::
+      >>> mul(2.9, 4 % 2)
+      0.0
+
+Check for one argument as power.
+      >>> mul(2 ** 3, 1.4)
+      11.2
+
+::
+      >>> mul(1.4, 2 ** 3)
+      11.2
