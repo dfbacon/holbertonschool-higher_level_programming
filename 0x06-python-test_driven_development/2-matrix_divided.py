@@ -13,17 +13,17 @@ def matrix_divided(matrix, div):
     matrix: matrix being evaluated
     div: divisor
     '''
-
+    type_err = "matrix must be a matrix (list of lists) of integers/floats"
     if matrix is []:
-        raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+        raise TypeError(type_err)
     for i in matrix:
         if i is []:
-            raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+            raise TypeError(type_err)
         if len(i) != len(matrix[0]):
             raise TypeError("Each row of the matrix must have the same size")
         for j in i:
             if isinstance(j, (int, float)) is False:
-                raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+                raise TypeError(type_err)
     if isinstance(div, (int, float)) is False:
         raise TypeError("div must be a number")
     if div is 0:
@@ -35,10 +35,3 @@ def matrix_divided(matrix, div):
             temp.append(round(j / div, 2))
         new.append(temp)
     return(new)
-
-matrix = [
-    [1, 2, 3],
-    [4, 5, 6]
-]
-print(matrix_divided(matrix, 3))
-print(matrix)
