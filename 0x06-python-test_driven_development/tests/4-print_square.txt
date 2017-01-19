@@ -1,0 +1,143 @@
+=======================================
+Test Cases for Use in 4-print_square.py
+=======================================
+
+Testing for function called "print_square(size)".
+
+print_square(size) prints the a square made of # characters. The size of the
+square is determined by size, which is the length of a side of the square.
+
+Only integers are allowed to be passed to the function.
+
+     >>> print_square = __import__('4-print_square').print_square
+
+Exceptions
+----------
+
+Check if correct number of arguments.
+      >>> print_square()
+      Traceback (most recent call last):
+      ...
+      TypeError: print_square() missing 1 required positional argument: 'size'
+
+::
+      >>> print_square(1 2)
+      Traceback (most recent call last):
+      ...
+      SyntaxError: invalid syntax
+
+::
+      >>> print_square(1, 2)
+      Traceback (most recent call last):
+      ...
+      TypeError: print_square() takes 1 positional argument but 2 were given
+
+Check if size is correct type.
+      >>> print_square("string")
+      Traceback (most recent call last):
+      ...
+      TypeError: size must be an integer
+
+::
+      >>> print_square([1])
+      Traceback (most recent call last):
+      ...
+      TypeError: size must be an integer
+
+::
+      >>> print_square({1})
+      Traceback (most recent call last):
+      ...
+      TypeError: size must be an integer
+
+::
+      >>> print_square({1: 1})
+      Traceback (most recent call last):
+      ...
+      TypeError: size must be an integer
+
+::
+      >>> print_square((1, 2, "and"))
+      Traceback (most recent call last):
+      ...
+      TypeError: size must be an integer
+
+::
+      >>> print_square(None)
+      Traceback (most recent call last):
+      ...
+      TypeError: size must be an integer
+
+::
+      >>> print_square(3.5)
+      Traceback (most recent call last):
+      ...
+      TypeError: size must be an integer
+
+::
+      >>> print_square(lambda x: x)
+      Traceback (most recent call last):
+      ...
+      TypeError: size must be an integer
+
+::
+      >>> print_square(foo)
+      Traceback (most recent call last):
+      ...
+      NameError: name 'foo' is not defined
+
+Check if argument is greater than zero.
+      >>> print_square(-5)
+      Traceback (most recent call last):
+      ...
+      TypeError: size must be >= 0
+
+Expected Output
+---------------
+
+      >>> print_square((2))
+      ##
+      ##
+
+::
+      >>> print_square(0)
+
+
+::
+      >>> print_square(3)
+      ###
+      ###
+      ###
+
+::
+      >>> print_square(True)
+      #
+
+::
+      >>> print_square(False)
+
+
+::
+      >>> print_square(2 * 2)
+      ####
+      ####
+      ####
+      ####
+
+::
+      >>> print_square(1 + 1)
+      ##
+      ##
+
+::
+      >>> print_square(2 - 1)
+      #
+
+::
+      >>> print_square(3 % 2)
+      #
+
+::
+      >>> print_square(2 ** 1)
+      ##
+      ##
