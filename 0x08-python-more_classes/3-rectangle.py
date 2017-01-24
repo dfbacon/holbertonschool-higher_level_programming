@@ -40,8 +40,11 @@ class Rectangle:
 
     def __str__(self):
         temp = ""
+        if self.height is 0 or self.width is 0:
+            return temp
         for i in range(self.height):
             for j in range(self.width):
                 temp += '#'
             temp += '\n'
+        temp = temp[:-1]
         return temp
