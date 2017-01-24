@@ -39,7 +39,9 @@ class Rectangle:
         return((self.width * 2) + (self.height *2))
 
     def __str__(self):
+        temp = ""
         for i in range(self.height):
             for j in range(self.width):
-                print('#', end='')
-            print()
+                temp += '#'
+            temp += '\n'
+        return temp
