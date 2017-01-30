@@ -1,0 +1,32 @@
+======================================
+Test Cases for Use in 1-my_list.py
+======================================
+
+Testing for class "MyList(list)" and method "print_sorted(self)".
+
+print_sorted(self) sorts the elements of a given list and prints the list.
+
+Only elements of 'int' type are allowed to be passed to the method.
+
+     >>> MyList = __import__('1-my_list').MyList
+
+-------------
+Correct Usage
+-------------
+Provided by Holberton School.
+	>>> my_list = MyList()
+	>>> my_list.append(1)
+	>>> my_list.append(4)
+	>>> my_list.append(2)
+	>>> my_list.append(3)
+	>>> my_list.append(5)
+	>>> print(my_list)
+	[1, 4, 2, 3, 5]
+
+::
+	>>> my_list.print_sorted()
+	[1, 2, 3, 4, 5]
+
+::
+	>>> print(my_list)
+	[1, 4, 2, 3, 5]
