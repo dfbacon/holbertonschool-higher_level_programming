@@ -1,0 +1,103 @@
+======================================
+Test Cases for Use in 1-my_list.py
+======================================
+
+Testing for class "BaseGeometry" and methods "are(self)" and
+"integer_validator(self, name, value)".
+
+area(self) not implemented and throws and exception..
+
+integer_validator(self, name, value) checks for value as int type. If not
+TypeError exception is raised. Then chekcs for value >= 0; if not, ValueError
+is raised.
+
+Only elements of 'int' type are allowed to be passed to the integer_validator
+method.
+
+     >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+-------------
+Correct Usage
+-------------.
+
+     >>> bg = BaseGeometry()
+     >>> type(bg)
+     <class '7-base_geometry.BaseGeometry'>
+
+Check for "area" and "integer_validator" methods.
+     >>> 'area' in dir(BaseGeometry)
+     True
+
+::
+     >>> 'integer_validator' in dir(BaseGeometry)
+     True
+
+::
+     >>> dir(bg) == dir(BaseGeometry)
+     True
+
+--------------
+Method Testing
+--------------
+
+     >>> bg.area()
+     Traceback (most recent call last):
+     ...
+     Exception: area() is not implemented
+
+::
+     >>> bg.integer_validator()
+     Traceback (most recent call last):
+     ...
+     TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+::
+     >>> bg.integer_validator(1)
+     Traceback (most recent call last):
+     ...
+     TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+::
+     >>> bg.integer_validator(1, 2, 3)
+     Traceback (most recent call last):
+     ...
+     TypeError: integer_validator() takes 3 positional arguments but 4 were given
+
+Check for integer_validator..
+     >>> def test_i(tests=[]):
+     ...     for test in tests:
+     ...       	  try:
+     ...		bg.integer_validator("name", test)
+     ...       	  except Exception as e:
+     ...       		print("[{}] {} for type {}".format(e.__class__.__name__, e, type(test)))
+     ...
+
+::
+     >>> tests = [True, 1.24, -76.87, set(), [1, 2], "a string", {"a":1}, ("11", 3), test_i, bg, BaseGeometry, None]
+     >>> test_i(tests)
+     [TypeError] name must be an integer for type <class 'float'>
+     [TypeError] name must be an integer for type <class 'float'>
+     [TypeError] name must be an integer for type <class 'set'>
+     [TypeError] name must be an integer for type <class 'list'>
+     [TypeError] name must be an integer for type <class 'str'>
+     [TypeError] name must be an integer for type <class 'dict'>
+     [TypeError] name must be an integer for type <class 'tuple'>
+     [TypeError] name must be an integer for type <class 'function'>
+     [TypeError] name must be an integer for type <class '7-base_geometry.BaseGeometry'>
+     [TypeError] name must be an integer for type <class 'type'>
+     [TypeError] name must be an integer for type <class 'NoneType'>
+
+::
+     >>> bg.integer_validator("name", -23)
+     Traceback (most recent call last):
+     ...
+     ValueError: name must be greater than 0
+
+::
+     >>> bg.integer_validator("name", 0)
+     Traceback (most recent call last):
+     ...
+     ValueError: name must be greater than 0
+
+Check for correct output.
+     >>> bg.integer_validator("name", 3)
