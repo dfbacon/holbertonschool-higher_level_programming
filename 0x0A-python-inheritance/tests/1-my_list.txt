@@ -30,3 +30,26 @@ Provided by Holberton School.
 ::
 	>>> print(my_list)
 	[1, 4, 2, 3, 5]
+
+::
+	>>> my_list.append(-1)
+	>>> my_list.append(-2)
+	>>> my_list.append(-5)
+	>>> print(my_list)
+	[1, 4, 2, 3, 5, -1, -2, -5]
+
+::
+	>>> my_list.print_sorted()
+	[-5, -2, -1, 1, 2, 3, 4, 5]
+
+Class inheritance.
+      >>> issubclass(MyList, list)
+      True
+
+Type test.
+     >>> type(my_list)
+     <class '1-my_list.MyList'>
+
+print_sorted defined.
+     >>> 'print_sorted' in dir(MyList)
+     True

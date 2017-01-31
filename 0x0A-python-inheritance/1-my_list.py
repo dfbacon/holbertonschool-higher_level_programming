@@ -24,14 +24,3 @@ class MyList(list):
         print_sorted sorts a list in
         '''
         print(sorted(self))
-
-'''
-my_list = MyList()
-my_list.append(1)
-my_list.append(4)
-my_list.append(2)
-my_list.append(3)
-my_list.append(A)
-print(my_list)
-my_list.print_sorted()
-'''
