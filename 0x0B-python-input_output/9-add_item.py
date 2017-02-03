@@ -20,9 +20,7 @@ with open(my_file, "r+") as fn:
         temp = load_from_json_file(my_file)
     else:
         temp = []
-    count = 0
-    for i in argv:
-        if count != 0:
+    if len(argv) > 0:
+        for i in argv:
             temp.append(argv[i])
-        count += 1
     save_to_json_file(temp, my_file)
