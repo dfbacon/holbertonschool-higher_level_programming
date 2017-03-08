@@ -1,4 +1,11 @@
 #!/usr/bin/python3
+'''
+This is the '0-select_states' module.
+
+0-select_states uses MySQLdb to access a database (passed as argv[3]) and
+prints the results.
+
+'''
 import MySQLdb
 import sys
 
