@@ -1,4 +1,11 @@
 #!/usr/bin/python3
+'''
+This is the '1-filter_states' module.
+
+1-filter states uses MySQLdb to access a database (passed as argv[3])
+and prints the results.
+
+'''
 import MySQLdb
 import sys
 
