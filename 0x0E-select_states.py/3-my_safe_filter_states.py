@@ -31,4 +31,4 @@ try:
     db.close()
 
 except Exception as e:
-    print("Don't inject me bro.")
+    print("No injection without protection.")
