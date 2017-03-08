@@ -8,27 +8,17 @@ filters for table.name to match argv[4] and prints the results.
 '''
 import MySQLdb
 import sys
-# import re
 
-try:
-    db = MySQLdb.connect(host="localhost",
-                         user=sys.argv[1],
-                         passwd=sys.argv[2],
-                         db=sys.argv[3])
-    cur = db.cursor()
-    state_name = ""
-    for character in sys.argv[4]:
-        if character is ';':
-            break
-        state_name += character
-    # state_name = re.sub(r'\W+', '', state_name)
-    query = "SELECT * FROM states\
-     WHERE name LIKE '{}' ORDER BY id ASC".format(state_name)
-    cur.execute(query)
-    for row in cur.fetchall():
-        print(row)
-    cur.close()
-    db.close()
-
-except Exception as e:
+db = MySQLdb.connect(host="localhost",
+                     user=sys.argv[1],
+                     passwd=sys.argv[2],
+                     db=sys.argv[3])
+cur = db.cursor()
+test = cur.execute("SELECT * FROM states\
+ WHERE name LIKE %s ORDER BY id ASC", (sys.argv[4],))
+if test == 0:
     print("No injection without protection.")
+for row in cur.fetchall():
+    print(row)
+cur.close()
+db.close()
