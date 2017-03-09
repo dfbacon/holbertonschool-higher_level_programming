@@ -17,7 +17,7 @@ if __name__ == "__main__":
     cur = db.cursor()
     test = cur.execute("SELECT cities.name, states.name FROM cities\
     INNER JOIN states ON states.id = cities.state_id\
-    WHERE states.name LIKE %s\
+    AND states.name == %s\
     ORDER BY cities.id ASC", (sys.argv[4],))
     if test == 0:
         print("No injection without protection.")
