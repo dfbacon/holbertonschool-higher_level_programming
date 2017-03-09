@@ -20,6 +20,7 @@ if __name__ == "__main__":
     if test == 0:
         print("No injection without protection.")
     for row in cur.fetchall():
-        print(row)
+        if row[1] == sys.argv[4]:
+            print(row)
     cur.close()
     db.close()
