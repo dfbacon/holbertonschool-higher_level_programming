@@ -6,19 +6,20 @@ This is the '3-my_safe_filter_states' module.
 filters for table.name to match argv[4] and prints the results.
 
 '''
-import MySQLdb
-import sys
+if __name__ == "__main__":
+    import MySQLdb
+    import sys
 
-db = MySQLdb.connect(host="localhost",
-                     user=sys.argv[1],
-                     passwd=sys.argv[2],
-                     db=sys.argv[3])
-cur = db.cursor()
-test = cur.execute("SELECT * FROM states\
- WHERE name LIKE %s ORDER BY id ASC", (sys.argv[4],))
-if test == 0:
-    print("No injection without protection.")
-for row in cur.fetchall():
-    print(row)
-cur.close()
-db.close()
+    db = MySQLdb.connect(host="localhost",
+                         user=sys.argv[1],
+                         passwd=sys.argv[2],
+                         db=sys.argv[3])
+    cur = db.cursor()
+    test = cur.execute("SELECT * FROM states\
+    WHERE name LIKE %s ORDER BY id ASC", (sys.argv[4],))
+    if test == 0:
+        print("No injection without protection.")
+    for row in cur.fetchall():
+        print(row)
+    cur.close()
+    db.close()
