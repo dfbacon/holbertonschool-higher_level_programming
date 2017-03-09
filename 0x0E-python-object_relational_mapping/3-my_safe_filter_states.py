@@ -16,11 +16,10 @@ if __name__ == "__main__":
                          db=sys.argv[3])
     cur = db.cursor()
     test = cur.execute("SELECT * FROM states\
-    WHERE name LIKE %s ORDER BY id ASC", (sys.argv[4],))
+    WHERE name = %s ORDER BY id ASC", (sys.argv[4],))
     if test == 0:
         print("No injection without protection.")
     for row in cur.fetchall():
-        if row[1] == sys.argv[4]:
-            print(row)
+        print(row)
     cur.close()
     db.close()
