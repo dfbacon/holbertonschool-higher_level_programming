@@ -8,7 +8,7 @@ the class definition of 'City'.
 
 from sys import argv
 from model_state import Base, State
-from model_city import cities
+from model_city import City
 from sqlalchemy import (create_engine)
 from sqlalchemy.orm import sessionmaker
 
@@ -18,8 +18,8 @@ if __name__ == "__main__":
     Base.metadata.create_all(eng)
     session_maker = sessionmaker(bind=eng)
     session = session_maker()
-    for instance in session.query(State.name, cities.id, cities.name).filter(
-            State.id == cities.state_id).order_by(cities.id):
+    for instance in session.query(State.name, City.id, City.name).filter(
+            State.id == City.state_id).order_by(City.id):
         print("{}: ({}) {}".format(instance[0], instance[1], instance[2]))
     session.close()
     eng.dispose()
