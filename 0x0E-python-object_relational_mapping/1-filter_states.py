@@ -6,6 +6,8 @@ This is the '1-filter_states' module.
 and prints the results.
 
 '''
+
+
 if __name__ == "__main__":
     import MySQLdb
     import sys

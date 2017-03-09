@@ -6,6 +6,8 @@ This is the '5-filter_cities' module.
 filters cities matched to given state (argv[4]) and prints the results.
 
 '''
+
+
 if __name__ == "__main__":
     import MySQLdb
     import sys

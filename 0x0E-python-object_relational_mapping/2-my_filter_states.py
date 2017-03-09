@@ -6,6 +6,8 @@ This is the '2-my_filter_states' module.
 filters for table.name to match argv[4] and prints the results.
 
 '''
+
+
 if __name__ == "__main__":
     import MySQLdb
     import sys

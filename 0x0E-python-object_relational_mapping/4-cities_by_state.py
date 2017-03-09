@@ -6,6 +6,8 @@ This is the '4-cities_by_state' module.
 lists all cities and prints the results.
 
 '''
+
+
 if __name__ == "__main__":
     import MySQLdb
     import sys
