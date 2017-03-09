@@ -6,18 +6,19 @@ This is the '2-my_filter_states' module.
 filters for table.name to match argv[4] and prints the results.
 
 '''
-import MySQLdb
-import sys
+if __name__ == "__main__":
+    import MySQLdb
+    import sys
 
-db = MySQLdb.connect(host="localhost",
-                     user=sys.argv[1],
-                     passwd=sys.argv[2],
-                     db=sys.argv[3])
-cur = db.cursor()
-query = "SELECT * FROM states\
- WHERE name LIKE '{}' ORDER BY id ASC".format(sys.argv[4])
-cur.execute(query)
-for row in cur.fetchall():
-    print(row)
-cur.close()
-db.close()
+    db = MySQLdb.connect(host="localhost",
+                         user=sys.argv[1],
+                         passwd=sys.argv[2],
+                         db=sys.argv[3])
+    cur = db.cursor()
+    query = "SELECT * FROM states\
+    WHERE name LIKE '{}' ORDER BY id ASC".format(sys.argv[4])
+    cur.execute(query)
+    for row in cur.fetchall():
+        print(row)
+    cur.close()
+    db.close()
