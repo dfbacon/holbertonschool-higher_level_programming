@@ -19,8 +19,6 @@ if __name__ == "__main__":
      INNER JOIN states ON states.id = cities.state_id\
      AND states.name = %s\
      ORDER BY cities.id ASC", (sys.argv[4],))
-    if test == 0:
-        print("No injection without protection.")
     cities = []
     for row in cur.fetchall():
         cities.append(row[0])
