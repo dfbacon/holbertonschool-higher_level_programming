@@ -19,6 +19,7 @@ if __name__ == "__main__":
     WHERE name LIKE '{}' ORDER BY id ASC".format(sys.argv[4])
     cur.execute(query)
     for row in cur.fetchall():
-        print(row)
+        if row[1] == sys.argv[4]:
+            print(row)
     cur.close()
     db.close()
