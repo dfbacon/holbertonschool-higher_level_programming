@@ -16,9 +16,9 @@ if __name__ == "__main__":
                          db=sys.argv[3])
     cur = db.cursor()
     test = cur.execute("SELECT cities.name, states.name FROM cities\
-    INNER JOIN states ON states.id = cities.state_id\
-    AND states.name == %s\
-    ORDER BY cities.id ASC", (sys.argv[4],))
+     INNER JOIN states ON states.id = cities.state_id\
+     AND states.name = %s\
+     ORDER BY cities.id ASC", (sys.argv[4],))
     if test == 0:
         print("No injection without protection.")
     cities = []
