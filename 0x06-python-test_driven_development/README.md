@@ -9,6 +9,15 @@ Python Requirements
 * All programs are compiled Ubuntu 14.04 LTS using python3 (version 3.4.3)
 * All code conforms to [PEP 8](https://www.python.org/dev/peps/pep-0008/).
 
+Pythone Test Case Requirements
+------------------------------
+* All test files within folder ```tests```.
+* All test files are text files.
+* Tests executed using:
+  ```
+  python3 -m doctest ./tests/*
+  ```
+
 Assignments
 -----------
 * 0-add_integer.py, tests/0-add_integer.txt
