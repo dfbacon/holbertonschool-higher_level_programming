@@ -5,7 +5,7 @@
 Python programming at [Holberton School](https://www.holbertonschool.com). The purpose of these assignments is to introduce the Python programming language, specifically, control flow using if/else/for/while loops and break/continue/pass statements.
 
 Python Requirements
---------------
+-------------------
 * All programs are compiled Ubuntu 14.04 LTS using python3 (version 3.4.3)
 * All code conforms to [PEP 8](https://www.python.org/dev/peps/pep-0008/).
 
