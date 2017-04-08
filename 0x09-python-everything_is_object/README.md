@@ -3,7 +3,9 @@
 0x09. Python - Everything is object
 ===================================
 Python programming at [Holberton School](https://www.holbertonschool.com). The purpose of these assignments is to introduce the Python programming language. This particular assignment primarily tested knowledge based on questions starting with, 
-'''"What should the result of..."'''.
+'''
+"What should the result of..."
+'''.
 
 Python Requirements
 -------------------
