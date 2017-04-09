@@ -19,7 +19,10 @@ $ ./0-hbtn_status.py
 if __name__ == "__main__":
     import urllib.request
 
-    r = urllib.request.Request('https://intranet.hbtn.io/status', data)
+    r = urllib.request.Request('https://intranet.hbtn.io/status')
     with urllib.request.urlopen(r) as response:
         html = response.read()
-        print(html)
+    print("Body response:")
+    print("    -type: ", type(html))
+    print("    -content: ", html)
+    print("    -utf8 content: ", html.decode("utf8"))
