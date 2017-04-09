@@ -26,5 +26,6 @@ if __name__ == "__main__":
         exit(1)
 
     url = sys.argv[1]
-    page, header = urllib.request.urlretrieve(url)
-    print(header['X-REQUEST-Id'])
+    with urllib.request.urlopen(url) as response:
+        header = response.info()
+        print("{}".format(header['X-REQUEST-Id']))
