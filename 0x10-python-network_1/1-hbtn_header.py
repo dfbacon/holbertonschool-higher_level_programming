@@ -26,10 +26,5 @@ if __name__ == "__main__":
         exit(1)
 
     url = sys.argv[1]
-    with urllib.request.urlopen(url) as response:
-        html = response.info()
-    for key in html.keys():
-        if key == "X-Request-Id":
-            print("found")
-        else:
-            print("not found")
+    page, header = urllib.request.urlretrieve(url)
+    print(header['X-REQUEST-Id'])
