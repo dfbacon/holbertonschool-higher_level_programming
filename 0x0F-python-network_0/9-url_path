@@ -1,0 +1,3 @@
+#!/bin/bash
+# defines the path
+/v1/auth/new
