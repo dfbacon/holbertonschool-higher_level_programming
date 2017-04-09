@@ -20,3 +20,19 @@ $ ./2-post_email.py domain_name email_address
 '''
 
 if __name__ == "__main__":
+    import urllib.request
+    import urllib.parse
+    import sys
+
+    if len(sys.argv) < 3:
+        print("Usage: ./2-post_email.py domain_name email_address")
+        exit(1)
+
+    url = sys.argv[1]
+    email = sys.argv[2]
+
+    data = urllib.parse.urlencode({'email': email})
+    data = data.encode('ascii')
+    with urllib.request.urlopen(url, data) as response:
+        address = (response.read()).decode('utf-8')
+        print(address)
