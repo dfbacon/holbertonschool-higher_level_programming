@@ -31,8 +31,15 @@ if __name__ == "__main__":
     except:
         l = ""
 
-    r = requests.post("http://0.0.0.0:5000/search_user", data={"q": l}).json()
-    if r = {}:
+    try:
+        r = requests.post("http://0.0.0.0:5000/search_user", data={"q": l})
+        try:
+            response = r.json()
+            if len(response) > 0:
+                print("[{}] {}".format(r['id'], r['name']))
+            elif len(response) == 0:
+                print("No result")
+        except:
+            print("Not a valid JSON")
+    except:
         print("No result")
-    else:
-        print("[{}] {}".format(r['id'], r['name']))
