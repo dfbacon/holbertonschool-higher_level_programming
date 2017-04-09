@@ -8,7 +8,7 @@ Bash Script Requirements
 ------------------------
 * All programs are compiled Ubuntu 14.04 LTS.
 * All scripts should be exactly 3 lines.
-  ```wc -l file``` should print ```3```.
+  * ```wc -l file``` should print ```3```.
 
 Assignments
 -----------
