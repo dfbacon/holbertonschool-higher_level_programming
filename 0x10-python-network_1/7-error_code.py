@@ -19,3 +19,16 @@ $ ./7-error_code.py domain_name
 '''
 
 if __name__ == "__main__":
+    import requests
+    import sys
+
+    if len(sys.argv) != 2:
+        print("Usage: ./7-error_code.py domain_name")
+        exit(1)
+
+    url = sys.argv[1]
+    r = requests.get(url)
+    if r.status_code and int(r.status_code) >= 400:
+        print("Error code: {}".format(r.status_code))
+    else:
+        print(r.text)
