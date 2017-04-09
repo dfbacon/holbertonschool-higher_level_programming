@@ -1,0 +1,674 @@
+Holberton School
+My planning
+My projects
+My concepts
+My batchmates
+All students
+QA reviews I can make
+My Captain's Logs
+My Officers
+My Speakers of the day
+My Servers
+ Docker white d7f9831c7f629cbec750008e0d9726068396ee5bdde8dfccebe99a083d0de930 My Containers
+My technical interviews
+My profile
+You just released the optional tasks of this project. Have fun!
+0x0F. Python - Network #0
+ Higher-level programming ― Python
+
+ by Guillaume, Full stack engineer
+
+ weight: 1
+
+ Ongoing project - started 04-10-2017, must end by 04-11-2017 (in about 15 hours) - you're 0% done.
+
+ QA review fully automated.
+
+Readme
+
+HTTP (HyperText Transfer Protocol), except: "TRACE" Request Method, "CONNECT" Request Method, Language Negotiation and "Options MultiView" and Character Set Negotiation
+HTTP Cookies
+Using cURL to debug
+What you should learn from this project
+
+At the end of this project you are expected to be able to explain to anyone, without the help of Google:
+
+What a URL is
+What HTTP is
+How to read a URL
+The scheme for a HTTP URL
+What a domain name is
+What a sub-domain is
+How to define a port number in a URL
+What a query string is
+What an HTTP request is
+What an HTTP response is
+What HTTP headers are
+What the HTTP message body is
+What an HTTP request method is
+What an HTTP response status code is
+What an HTTP Cookie is
+How to make a request with cURL
+What happens when you type google.com in your browser (Application level)
+Requirements for Bash scripts
+
+Allowed editors: vi, vim, emacs
+All your scripts will be tested on Ubuntu 14.04 LTS
+All your scripts should be exactly 3 lines long (wc -l file should print 3)
+All your files should end with a new line
+The first line of all your files should be exactly #!/bin/bash
+The second line of all your Bash scripts should be a comment explaining what is the script doing
+All your files must be executable
+Tasks
+  Done?  
+Help!
+0. URL hostname mandatory
+
+In the following URL, what's the hostname?
+
+http://www.holbertonschool.com
+Repo:
+
+GitHub repository: holbertonschool-higher_level_programming
+Directory: 0x0F-python-network_0
+File: 0-url_hostname
+  Done?  
+Help!
+1. URL protocol mandatory
+
+In the following URL, what's the protocol?
+
+http://www.holbertonschool.com
+Repo:
+
+GitHub repository: holbertonschool-higher_level_programming
+Directory: 0x0F-python-network_0
+File: 1-url_protocol
+  Done?  
+Help!
+2. URL port number #0 mandatory
+
+What will be the port number requested by this URL?
+
+https://www.holbertonschool.com:8080/apply
+Repo:
+
+GitHub repository: holbertonschool-higher_level_programming
+Directory: 0x0F-python-network_0
+File: 2-url_port
+  Done?  
+Help!
+3. URL port number #1 mandatory
+
+What will be the port number requested by this URL?
+
+http://www.holbertonschool.com/apply
+Repo:
+
+GitHub repository: holbertonschool-higher_level_programming
+Directory: 0x0F-python-network_0
+File: 3-url_port
+  Done?  
+Help!
+4. URL port number #2 mandatory
+
+What will be the port number requested by this URL?
+
+afp://www.holbertonschool.com/access_in_port_543
+Repo:
+
+GitHub repository: holbertonschool-higher_level_programming
+Directory: 0x0F-python-network_0
+File: 4-url_port
+  Done?  
+Help!
+5. URL sub domain #0 mandatory
+
+In the following URL, what's the sub domain?
+
+https://api.holbertonschool.com/v1/auth
+Repo:
+
+GitHub repository: holbertonschool-higher_level_programming
+Directory: 0x0F-python-network_0
+File: 5-url_subdomain
+  Done?  
+Help!
+6. URL sub domain #1 mandatory
+
+In the following URL, what's the sub domain?
+
+https://api-dev.holbertonschool.com/v1/auth/new
+Repo:
+
+GitHub repository: holbertonschool-higher_level_programming
+Directory: 0x0F-python-network_0
+File: 6-url_subdomain
+  Done?  
+Help!
+7. URL path #0 mandatory
+
+In the following URL, what's the resource path?
+
+https://www.holbertonschool.com/index.html
+Repo:
+
+GitHub repository: holbertonschool-higher_level_programming
+Directory: 0x0F-python-network_0
+File: 7-url_path
+  Done?  
+Help!
+8. URL path #1 mandatory
+
+In the following URL, what's the resource path?
+
+https://www.holbertonschool.com/assets/scripts/main.js
+Repo:
+
+GitHub repository: holbertonschool-higher_level_programming
+Directory: 0x0F-python-network_0
+File: 8-url_path
+  Done?  
+Help!
+9. URL path #2 mandatory
+
+In the following URL, what's the resource path?
+
+https://api.holbertonschool.com/v1/auth/new
+Repo:
+
+GitHub repository: holbertonschool-higher_level_programming
+Directory: 0x0F-python-network_0
+File: 9-url_path
+  Done?  
+Help!
+10. URL query string #0 mandatory
+
+In the following URL, what's the name of the parameter in the query string?
+
+https://www.holbertonschool.com/apply?batch=89
+Repo:
+
+GitHub repository: holbertonschool-higher_level_programming
+Directory: 0x0F-python-network_0
+File: 10-url_query_string
+  Done?  
+Help!
+11. URL query string #1 mandatory
+
+In the following URL, how many parameters are in the query string?
+
+https://www.holbertonschool.com/apply?batch=89&location=SF
+Repo:
+
+GitHub repository: holbertonschool-higher_level_programming
+Directory: 0x0F-python-network_0
+File: 11-url_query_string
+  Done?  
+Help!
+12. URL query string #2 mandatory
+
+In the following URL, how many parameters are in the query string?
+
+https://www.holbertonschool.com/apply?batch=89&location=SF&name=John%20do%20is%20the%20best%20%3D%20c%20is%20fun
+Repo:
+
+GitHub repository: holbertonschool-higher_level_programming
+Directory: 0x0F-python-network_0
+File: 12-url_query_string
+  Done?  
+Help!
+13. HTTP verb #0 mandatory
+
+When you are typing https://intranet.hbtn.io in your browser, which HTTP verb is used?
+
+Repo:
+
+GitHub repository: holbertonschool-higher_level_programming
+Directory: 0x0F-python-network_0
+File: 13-http_verb
+  Done?  
+Help!
+14. HTTP verb #1 mandatory
+
+In this following HTML code, which HTTP verb will be used when you will submit this form?
+
+<FORM action="/login.php" method="post">
+    <INPUT type="email" name="email" placeholder="Email" required/>
+    <INPUT type="password" name="password" placeholder="Password" required/>
+    <INPUT type="submit" name="submit" value="Login" />
+<FORM>
+Repo:
+
+GitHub repository: holbertonschool-higher_level_programming
+Directory: 0x0F-python-network_0
+File: 14-http_verb
+  Done?  
+Help!
+15. HTTP verb #2 mandatory
+
+In this following HTML code, which HTTP verb will be used when you will submit this form?
+
+<FORM action="/12/update.php" method="put">
+    <INPUT type="text" name="first_name" value="Bob"/>
+    <INPUT type="text" name="last_name" value="Dylan"/>
+    <INPUT type="submit" name="update" value="Update" />
+<FORM>
+Repo:
+
+GitHub repository: holbertonschool-higher_level_programming
+Directory: 0x0F-python-network_0
+File: 15-http_verb
+  Done?  
+Help!
+16. HTTP status code #0 mandatory
+
+What's the status code number for a web page that can't be found?
+
+Repo:
+
+GitHub repository: holbertonschool-higher_level_programming
+Directory: 0x0F-python-network_0
+File: 16-http_status_code
+  Done?  
+Help!
+17. HTTP status code #1 mandatory
+
+What's the status code number for a permanent redirection (moved permanently)?
+
+Repo:
+
+GitHub repository: holbertonschool-higher_level_programming
+Directory: 0x0F-python-network_0
+File: 17-http_status_code
+  Done?  
+Help!
+18. HTTP status code #2 mandatory
+
+What's the status code number for an invalid HTTP request (server can't understand it)?
+
+Repo:
+
+GitHub repository: holbertonschool-higher_level_programming
+Directory: 0x0F-python-network_0
+File: 18-http_status_code
+  Done?  
+Help!
+19. HTTP status code #3 mandatory
+
+What is the first digit of status codes that indicate a server error?
+
+Repo:
+
+GitHub repository: holbertonschool-higher_level_programming
+Directory: 0x0F-python-network_0
+File: 19-http_status_code
+  Done?  
+Help!
+20. HTTP header #0 mandatory
+
+Which HTTP request header indicates the browser used by the client sending the request?
+
+Repo:
+
+GitHub repository: holbertonschool-higher_level_programming
+Directory: 0x0F-python-network_0
+File: 20-http_header
+  Done?  
+Help!
+21. HTTP header #1 mandatory
+
+What is the name of the HTTP request header that defines the size (in bytes) of the message body?
+
+Repo:
+
+GitHub repository: holbertonschool-higher_level_programming
+Directory: 0x0F-python-network_0
+File: 21-http_header
+  Done?  
+Help!
+22. HTTP header #2 mandatory
+
+What is the name of the HTTP request header used to send cookies from the client?
+
+Repo:
+
+GitHub repository: holbertonschool-higher_level_programming
+Directory: 0x0F-python-network_0
+File: 22-http_header
+  Done?  
+Help!
+23. HTTP header #3 mandatory
+
+What is the name of the HTTP response header used to send cookies to the client from the server?
+
+Repo:
+
+GitHub repository: holbertonschool-higher_level_programming
+Directory: 0x0F-python-network_0
+File: 23-http_header
+  Done?  
+Help!
+24. HTTP header #4 mandatory
+
+What is the name of the HTTP response header used to define the size, in bytes, of the body of the response?
+
+Repo:
+
+GitHub repository: holbertonschool-higher_level_programming
+Directory: 0x0F-python-network_0
+File: 24-http_header
+  Done?  
+Help!
+25. HTTP header #5 mandatory
+
+What is the name of the HTTP response header used to define the status code of the response?
+
+Repo:
+
+GitHub repository: holbertonschool-higher_level_programming
+Directory: 0x0F-python-network_0
+File: 25-http_header
+  Done?  
+Help!
+26. HTTP header #6 mandatory
+
+What is the name of the HTTP response header used to define the formatting of the body? (This header gives details to the client on how to interpret the data received.)
+
+Repo:
+
+GitHub repository: holbertonschool-higher_level_programming
+Directory: 0x0F-python-network_0
+File: 26-http_header
+  Done?  
+Help!
+27. HTTP header #7 mandatory
+
+When an HTTP response indicates a redirection, which header defines the URL the client should be redirected to?
+
+Repo:
+
+GitHub repository: holbertonschool-higher_level_programming
+Directory: 0x0F-python-network_0
+File: 27-http_header
+  Done?  
+Help!
+28. HTTP header #8 mandatory
+
+What is the name of the HTTP response header that defines a list of available HTTP methods for this URL?
+
+Repo:
+
+GitHub repository: holbertonschool-higher_level_programming
+Directory: 0x0F-python-network_0
+File: 28-http_header
+  Done?  
+Help!
+29. cURL HTTP method mandatory
+
+What is the curl option that defines the HTTP method used?
+
+Repo:
+
+GitHub repository: holbertonschool-higher_level_programming
+Directory: 0x0F-python-network_0
+File: 29-curl_http_method
+  Done?  
+Help!
+30. cURL 301 mandatory
+
+What is the curl option to follow all redirects?
+
+Repo:
+
+GitHub repository: holbertonschool-higher_level_programming
+Directory: 0x0F-python-network_0
+File: 30-curl_301
+  Done?  
+Help!
+31. cURL Header mandatory
+
+Which curl option is used to set an HTTP header to a specific value?
+
+Repo:
+
+GitHub repository: holbertonschool-higher_level_programming
+Directory: 0x0F-python-network_0
+File: 31-curl_header
+  Done?  
+Help!
+32. cURL Body parameters mandatory
+
+What is the curl option to set a body key-value parameter?
+
+Repo:
+
+GitHub repository: holbertonschool-higher_level_programming
+Directory: 0x0F-python-network_0
+File: 32-curl_body_parameters
+  Done?  
+Help!
+33. cURL Cookie mandatory
+
+What is the curl option to set a cookie with a key-value pair?
+
+Repo:
+
+GitHub repository: holbertonschool-higher_level_programming
+Directory: 0x0F-python-network_0
+File: 33-curl_cookie
+  Done?  
+Help!
+34. cURL No progress mandatory
+
+What is the curl option to disable the progression display?
+
+Repo:
+
+GitHub repository: holbertonschool-higher_level_programming
+Directory: 0x0F-python-network_0
+File: 34-curl_no_progress
+  Done?  
+Help!
+35. cURL request body mandatory
+
+What is the curl option to save the request body to a file?
+
+Repo:
+
+GitHub repository: holbertonschool-higher_level_programming
+Directory: 0x0F-python-network_0
+File: 35-curl_request_body
+  Done?  
+Help!
+36. cURL body size mandatory
+
+Write a Bash script takes in a URL, sends a request to that URL, and displays the size of the body of the response
+
+The size must be displayed in bytes
+You have to use curl
+Please test your script in the container provided, using the web server running on port 5000
+
+guillaume@ubuntu:~/0x0F$ ./36-body_size.sh 0.0.0.0:5000
+10
+guillaume@ubuntu:~/0x0F$ 
+Repo:
+
+GitHub repository: holbertonschool-higher_level_programming
+Directory: 0x0F-python-network_0
+File: 36-body_size.sh
+Get a container
+  Done?  
+Help!
+37. cURL to the end mandatory
+
+Write a Bash script that takes in a URL, sends a GET request to the URL, and displays the body of the response
+
+Display only body of a 200 status code response
+You have to use curl
+Please test your script in the container provided, using the web server running on port 5000
+
+guillaume@ubuntu:~/0x0F$ ./37-body.sh 0.0.0.0:5000/route_1 ; echo ""
+Route 2
+guillaume@ubuntu:~/0x0F$ 
+Repo:
+
+GitHub repository: holbertonschool-higher_level_programming
+Directory: 0x0F-python-network_0
+File: 37-body.sh
+Get a container
+  Done?  
+Help!
+38. cURL Method mandatory
+
+Write a Bash script that sends a DELETE request to the URL passed as the first argument and displays the body of the response
+
+You have to use curl
+Please test your script in the container provided, using the web server running on port 5000
+
+guillaume@ubuntu:~/0x0F$ ./38-delete.sh 0.0.0.0:5000/route_3 ; echo ""
+I'm a DELETE request
+guillaume@ubuntu:~/0x0F$ 
+Repo:
+
+GitHub repository: holbertonschool-higher_level_programming
+Directory: 0x0F-python-network_0
+File: 38-delete.sh
+Get a container
+  Done?  
+Help!
+39. cURL only methods mandatory
+
+Write a Bash script that takes in a URL and displays all HTTP methods the server will accept.
+
+You have to use curl
+Please test your script in the container provided, using the web server running on port 5000
+
+guillaume@ubuntu:~/0x0F$ ./39-methods.sh 0.0.0.0:5000/route_4
+OPTIONS, HEAD, PUT
+guillaume@ubuntu:~/0x0F$ 
+Repo:
+
+GitHub repository: holbertonschool-higher_level_programming
+Directory: 0x0F-python-network_0
+File: 39-methods.sh
+Get a container
+  Done?  
+Help!
+40. cURL headers mandatory
+
+Write a Bash script that takes in a URL as an argument, sends a GET request to the URL, and displays the body of the response
+
+A header variable X-HolbertonSchool-User-Id must be sent with the value 98
+You have to use curl
+Please test your script in the container provided, using the web server running on port 5000
+
+guillaume@ubuntu:~/0x0F$ ./40-header.sh 0.0.0.0:5000/route_5 ; echo ""
+Hello Holberton School!
+guillaume@ubuntu:~/0x0F$ 
+Repo:
+
+GitHub repository: holbertonschool-higher_level_programming
+Directory: 0x0F-python-network_0
+File: 40-header.sh
+Get a container
+  Done?  
+Help!
+41. cURL POST parameters mandatory
+
+Write a Bash script that takes in a URL, sends a POST request to the passed URL, and displays the body of the response
+
+A variable email must be sent with the value hr@holbertonschool.com
+A variable subject must be sent with the value I will always be here for PLD
+You have to use curl
+Please test your script in the container provided, using the web server running on port 5000
+
+guillaume@ubuntu:~/0x0F$ ./41-post_params.sh 0.0.0.0:5000/route_6 ; echo ""
+POST params:
+    email: hr@holbertonschool.com
+    subject: I will always be here for PLD
+guillaume@ubuntu:~/0x0F$ 
+Repo:
+
+GitHub repository: holbertonschool-higher_level_programming
+Directory: 0x0F-python-network_0
+File: 41-post_params.sh
+Get a container
+  Done?  
+Help!
+42. Only status code #advanced
+
+Write a Bash script that sends a request to a URL passed as an argument, and displays only the status code of the response.
+
+You are not allowed to use any pipe, redirection, etc.
+You are not allowed to use ; and &&
+You have to use curl
+Please test your script in the container provided, using the web server running on port 5000
+
+guillaume@ubuntu:~/0x0F$ ./100-status_code.sh 0.0.0.0:5000 ; echo ""
+200
+guillaume@ubuntu:~/0x0F$ 
+guillaume@ubuntu:~/0x0F$ ./100-status_code.sh 0.0.0.0:5000/nop ; echo ""
+404
+guillaume@ubuntu:~/0x0F$ 
+Repo:
+
+GitHub repository: holbertonschool-higher_level_programming
+Directory: 0x0F-python-network_0
+File: 100-status_code.sh
+Get a container
+  Done?  
+Help!
+43. cURL a JSON file #advanced
+
+Write a Bash script that sends a JSON POST request to a URL passed as the first argument, and displays the body of the response.
+
+Your script must send a POST request with the contents of a file, passed with the filename as the second argument of the script, in the body of the request
+You have to use curl
+Please test your scripts in the container provided, using the web server running on port 5000
+
+guillaume@ubuntu:~/0x0F$ cat my_json_0
+{
+    "name": "John Doe",
+    "age": 33
+}
+guillaume@ubuntu:~/0x0F$ ./101-post_json.sh 0.0.0.0:5000/route_json my_json_0 ; echo ""
+Valid JSON
+guillaume@ubuntu:~/0x0F$ 
+guillaume@ubuntu:~/0x0F$ cat my_json_1
+I'm a JSON! really!
+guillaume@ubuntu:~/0x0F$ ./101-post_json.sh 0.0.0.0:5000/route_json my_json_1 ; echo ""
+Not a valid JSON
+guillaume@ubuntu:~/0x0F$ 
+guillaume@ubuntu:~/0x0F$ cat my_json_2
+{
+    "name": "John Doe",
+    "age": 33,
+}
+guillaume@ubuntu:~/0x0F$ ./101-post_json.sh 0.0.0.0:5000/route_json my_json_2 ; echo ""
+Not a valid JSON
+guillaume@ubuntu:~/0x0F$ 
+Repo:
+
+GitHub repository: holbertonschool-higher_level_programming
+Directory: 0x0F-python-network_0
+File: 101-post_json.sh
+Get a container
+  Done?  
+Help!
+44. Catch me if you can! #advanced
+
+Write a Bash script that makes a request to 0.0.0.0:5000/catch_me that causes the server to respond with a message containing You got me!, in the body of the response.
+
+You have to use curl
+You are not allow to use echo, cat, etc. to display the final result
+Please test your script in the container provided, using the web server running on port 5000
+
+guillaume@ubuntu:~/0x0F$ ./102-catch_me.sh ; echo ""
+You got me!
+guillaume@ubuntu:~/0x0F$ 
+Repo:
+
+GitHub repository: holbertonschool-higher_level_programming
+Directory: 0x0F-python-network_0
+File: 102-catch_me.sh
