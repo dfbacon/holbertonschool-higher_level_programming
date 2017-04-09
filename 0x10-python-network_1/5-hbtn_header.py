@@ -18,3 +18,13 @@ $ ./5-hbtn_header domain_name
 '''
 
 if __name__ == "__main__":
+    import requests
+    import sys
+
+    if len(sys.argv) != 2:
+        print("Usage: ./5-hbtn_header.py domain_name")
+        exit(1)
+
+    url = sys.argv[1]
+    r = requests.get(url)
+    print("{}".format(r.headers['X-Request-Id']))
