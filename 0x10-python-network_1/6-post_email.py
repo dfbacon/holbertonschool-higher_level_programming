@@ -19,3 +19,15 @@ $ ./6-post_email.py domain_name email_address
 '''
 
 if __name__ == "__main__":
+    import requests
+    import sys
+
+    if len(sys.argv) != 3:
+        print("Usage: ./6-post_email.py domain_name email_name")
+        exit(1)
+
+    url = sys.argv[1]
+    email = sys.argv[2]
+    var = {'email': email}
+    r = requests.post(url, data=var)
+    print(r.text)
