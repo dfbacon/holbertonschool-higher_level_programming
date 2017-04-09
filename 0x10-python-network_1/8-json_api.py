@@ -23,3 +23,16 @@ $ ./8-json_api.py
 '''
 
 if __name__ == "__main__":
+    import requests
+    import sys
+
+    try:
+        l = sys.argv[1]
+    except:
+        l = ""
+
+    r = requests.post("http://0.0.0.0:5000/search_user", data={"q": l}).json()
+    if r = {}:
+        print("No result")
+    else:
+        print("[{}] {}".format(r['id'], r['name']))
