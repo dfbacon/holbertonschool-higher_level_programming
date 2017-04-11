@@ -13,15 +13,15 @@ Requirements:
 */
 
 const request = require('request');
-var url = process.argv[2];
-var count = 0;
+const url = process.argv[2];
 
-request(url, function (error, response, body) {
+request(url, (error, response, body) => {
   if (error) {
     return console.log(error);
   }
 
   let data = JSON.parse(body).results;
+  let count = 0;
   for (let i = 0; i < data.length; i++) {
     let search = data[i].characters.find((name) => {
       return name.match(/18/);

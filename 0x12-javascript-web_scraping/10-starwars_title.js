@@ -11,8 +11,8 @@ Requirements:
 */
 
 const request = require('request');
-var id = parseInt(process.argv[2]);
-var url = 'http://swapi.co/api/films/' + id;
+const id = parseInt(process.argv[2]);
+const url = 'http://swapi.co/api/films/' + id;
 
 if (id < 8) {
   request(url, function (error, response, body) {
