@@ -29,7 +29,7 @@ module.exports = {
     }
     this.print = function () {
       for (let x = 0; x < this.height; x++) {
-	console.log(('X').repeat(this.width));
+        console.log(('X').repeat(this.width));
       }
     };
   }
