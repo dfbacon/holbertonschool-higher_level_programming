@@ -39,8 +39,9 @@ function Rectangle (w, h) {
   };
 }
 
-module.exports = {
-  Square: function (size) {
-    Rectangle.call(this, size, size);
-  }
-};
+function Square (size) {
+  Rectangle.call(this, size, size);
+}
+
+exports.Rectangle = Rectangle;
+exports.Square = Square;
