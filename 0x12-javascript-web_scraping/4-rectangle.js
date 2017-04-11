@@ -46,7 +46,7 @@ module.exports = {
       [this.width, this.height] = [this.height, this.width];
     };
 
-    this.double = function() {
+    this.double = function () {
       this.width *= 2;
       this.height *= 2;
     };
