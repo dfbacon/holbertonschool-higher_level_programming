@@ -10,7 +10,8 @@ Javascript Requirements
 * All your files will be interpreted on Chrome (version 57.0).
 * Must use jQuery version 3.x.
 * All code must be [semistandard](https://github.com/Flet/semistandard) compliant.
-    * with the flag `--global $: semistandard *.js --global $`
+    * with the flag:
+    `--global $ <filename.js>`
 * The use of the `var` function is not allowed.
 * HTML should not reload for each action: DOM manipulation, update values, fetch data...
 
