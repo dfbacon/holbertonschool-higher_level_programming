@@ -33,5 +33,5 @@ if __name__ == "__main__":
         with urllib.request.urlopen(url) as response:
             page = (response.read()).decode('utf-8')
             print(page)
-    except urllib.error.HTTPError as error:
-        print("Error code: {}".format(error.code)
+    except urllib.error.HTTPError as e:
+        print("Error code: {}".format(e.code)
