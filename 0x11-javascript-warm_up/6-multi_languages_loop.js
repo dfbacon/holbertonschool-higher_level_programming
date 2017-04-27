@@ -11,3 +11,8 @@ Requirements:
 * You must use a loop
 
 */
+
+const stringList = ['C is fun', 'Python is cool', 'Javascript is amazing'];
+for (let i = 0; i < stringList.length; i++) {
+  console.log(stringList[i]);
+}
