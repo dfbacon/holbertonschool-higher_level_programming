@@ -20,7 +20,6 @@ Base code:
   myObject.incr();
   console.log(myObject);
 
-
 Requirements:
 * You are not allowed to use var
 
