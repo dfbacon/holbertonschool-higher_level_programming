@@ -13,9 +13,10 @@ Requirements:
 const request = require('request');
 const url = process.argv[2] || '';
 
-request(url, function (error, response) {
+request(url, (error, response, body) => {
   if (error) {
     return console.log(error);
   }
+
   return console.log('code: ', response.statusCode);
 });
