@@ -10,8 +10,8 @@ Requirements:
 */
 
 const request = require('request');
-var url = process.argv[2] || '';
-var completed = {};
+const url = process.argv[2] || '';
+const completed = {};
 
 request(url, function (error, response, body) {
   if (error) {
