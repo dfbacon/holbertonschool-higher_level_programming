@@ -12,8 +12,8 @@ Requirements:
 */
 
 const fs = require('fs');
-var file = process.argv[2] || '';
-var string = process.argv[3] || '';
+const file = process.argv[2] || '';
+const string = process.argv[3] || '';
 
 fs.writeFile(file, string, (err) => {
   if (err) {
