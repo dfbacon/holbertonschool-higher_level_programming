@@ -14,7 +14,6 @@ Requirements:
 
 const request = require('request');
 const url = process.argv[2];
-const count = 0;
 
 request(url, (error, response, body) => {
   if (error) {
@@ -22,6 +21,7 @@ request(url, (error, response, body) => {
   }
 
   let data = JSON.parse(body).results;
+  let count = 0;
   for (let i = 0; i < data.length; i++) {
     let search = data[i].characters.find((name) => {
       return name.match(/18/);
