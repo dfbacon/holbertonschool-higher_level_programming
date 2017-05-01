@@ -13,10 +13,10 @@ Requirements:
 */
 
 const request = require('request');
-var url = process.argv[2];
-var count = 0;
+const url = process.argv[2];
+const count = 0;
 
-request(url, function (error, response, body) {
+request(url, (error, response, body) => {
   if (error) {
     return console.log(error);
   }
