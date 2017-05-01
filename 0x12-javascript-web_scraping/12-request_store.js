@@ -12,8 +12,8 @@ Requirements:
 
 const fs = require('fs');
 const request = require('request');
-var url = process.argv[2] || '';
-var file = process.argv[3];
+const url = process.argv[2] || '';
+const file = process.argv[3];
 
 request(url, function (error, response, body) {
   if (error) {
